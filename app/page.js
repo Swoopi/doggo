@@ -1,95 +1,85 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
+import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function RootPage() {
+  const leftIrisRef = useRef(null);
+  const rightIrisRef = useRef(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const { clientX, clientY } = event;
+
+      const updateIris = (irisRef, eyeCenterX, eyeCenterY) => {
+        const deltaX = clientX - eyeCenterX;
+        const deltaY = clientY - eyeCenterY;
+        const angle = Math.atan2(deltaY, deltaX);
+
+        const maxMovement = 4;
+        const moveX = Math.cos(angle) * maxMovement;
+        const moveY = Math.sin(angle) * maxMovement - 1;
+
+        irisRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      };
+
+      const leftEye = leftIrisRef.current.getBoundingClientRect();
+      const leftEyeCenterX = leftEye.left + leftEye.width / 2;
+      const leftEyeCenterY = leftEye.top + leftEye.height / 2;
+      updateIris(leftIrisRef, leftEyeCenterX, leftEyeCenterY);
+
+      const rightEye = rightIrisRef.current.getBoundingClientRect();
+      const rightEyeCenterX = rightEye.left + rightEye.width / 2;
+      const rightEyeCenterY = rightEye.top + rightEye.height / 2;
+      updateIris(rightIrisRef, rightEyeCenterX, rightEyeCenterY);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const handleClick = () => {
+    router.push('/home');
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="contenedor" onClick={handleClick}>
+      <div className="todo">
+        <div className="dog">
+          <span className="leg3"></span>
+          <div className="body">
+            <span className="cola"></span>
+            <span className="leg"></span>
+          </div>
+          <div className="cabezota">
+            <div className="orejas">
+              <span className="orejitas"></span>
+            </div>
+            <div className="orejas3">
+              <span className="orejitas3"></span>
+            </div>
+            <div className="cabeza">
+              <span className="cabeza3"></span>
+              <span className="ojos">
+                <span className="iris" ref={leftIrisRef}></span>
+              </span>
+              <span className="ojos">
+                <span className="iris" ref={rightIrisRef}></span>
+              </span>
+              <span className="nariz"></span>
+              <span className="nariz3"></span>
+            </div>
+          </div>
+          <div className="canasta"></div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <h1 className="cta-text">
+        Click anywhere to begin!
+      </h1>
+    </div>
   );
 }
