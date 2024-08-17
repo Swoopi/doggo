@@ -1,22 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DoggoAI - A Friendly AI Chatbot
+
+DoggoAI is a chatbot built with Next.js and OpenAI's GPT-3.5-turbo, designed to provide comfort and companionship. The chatbot is themed around a friendly dog named Doggo, who is always here to make you feel better and offer kind words of support.
+
+## Features
+
+- **Empathetic Support:** DoggoAI is here to listen, provide warmth, and offer encouraging words.
+- **Interactive Dog Animation:** A playful dog animation follows your mouse, adding a fun visual element.
+- **Real-time Responses:** DoggoAI interacts with users in real-time, making conversations feel natural.
 
 ## Getting Started
 
-To start, 
+To get started with DoggoAI, follow the steps below:
+
+### Prerequisites
+
+Ensure you have Node.js installed on your system.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/doggoai.git
+   cd doggoai
+
+### Install the necessary dependencies
+npm install next openai
 
 
-Install:
+
+### Set up environment variables:
+Create a .env.local file in the root directory of your project.
+
+Add your OpenAI API key to the .env.local file:
+
+OPENAI_API_KEY=your-api-key-here
 
 
-npm install next openai 
-
-
-Fill in .env.local
-
-
-Run the development server:
-
-```bash
+### Running the Development Server
 npm run dev
 # or
 yarn dev
@@ -24,25 +45,21 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Modifying the Project
+You can start editing the bot by modifying app/page.js. Any changes you make will be reflected in real-time.
 
-## Learn More
+### Deployment
+The easiest way to deploy DoggoAI is to use the Vercel Platform. Check out the Next.js deployment documentation for more details.
 
-To learn more about Next.js, take a look at the following resources:
+### Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue to suggest improvements or report bugs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Contact
+For any questions or feedback, please contact [your email or contact information].
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
