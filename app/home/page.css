@@ -1,0 +1,457 @@
+.userMessageCustom {
+    background-color: #D1E9F6;
+    color: black;
+    border-radius: 16px;
+    padding: 10px 15px;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: row; /* Default to horizontal layout */
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .assistantMessageCustom {
+    background-color: #EECAD5;
+    color: black;
+    border-radius: 16px;
+    padding: 10px 15px;
+  }
+  
+  .chatContainerCustom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 70%; /* Adjust width to allow room for the dog */
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .chatbotCustom {
+    background: #FCD7B9;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    max-height: 100%;
+    overflow: auto;
+  }
+  
+  .dogContainerCustom {
+    position: relative;
+    flex: 0 0 30%; /* Keep the dog container at 30% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+  
+  .chatContainerCustom .sendButtonCustom {
+    background-color: #F6EACB;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition-duration: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .chatContainerCustom .sendButtonCustom:hover {
+    background-color: #EECAD5;
+    color: black;
+  }
+  
+  .dogWrapperCustom {
+    display: flex;
+  justify-content: center;
+  margin: 30px 90px;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+
+  
+.dogCustom {
+  position: relative;
+
+
+
+}
+  
+  .headCustom {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    transform: rotate(12deg);
+    transform-origin: 0% 100%;
+    margin: 225px 370px;
+    animation: giraCustom 3s alternate infinite;
+  }
+  
+  .faceCustom {
+    position: absolute;
+    width: 121px;
+    height: 121px;
+    border-radius: 100%;
+    background: #3f5967;
+    margin: -102px -33px;
+  }
+  
+  .faceCustom::before {
+    content: "";
+    position: absolute;
+    width: 132px;
+    height: 102px;
+    border-radius: 100%;
+    background: #3f5967;
+    margin: 45px -5px;
+  }
+  
+  .innerFaceCustom {
+    position: absolute;
+    width: 102px;
+    height: 102px;
+    border-radius: 100%;
+    background: #48636f;
+    margin: 9px 10px;
+  }
+  
+  .innerFaceCustom::before {
+    content: "";
+    position: absolute;
+    width: 112px;
+    height: 80px;
+    border-radius: 100%;
+    background: #48636f;
+    margin: 50px -5px;
+  }
+  
+  .eyesCustom {
+    position: absolute;
+    width: 21px;
+    height: 30px;
+    border-radius: 100%;
+    background: #121d21;
+    margin: 60px 21px;
+  }
+  
+  .eyesCustom::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 30px;
+    border-radius: 100%;
+    background: #121d21;
+    margin: 1px 60px;
+  }
+  
+  .pupilCustom {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: white;
+    margin: 3px 6px;
+    transition: transform 0.1s ease;
+  }
+  
+  .pupilCustom::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: white;
+    margin: 1px 60px;
+  }
+  
+  .noseTipCustom::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    border-radius: 100%;
+    background: white;
+    margin: 7px 5px;
+  }
+  
+  .noseCustom {
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    border-radius: 100%;
+    background: #648999;
+    transform: rotate(-35deg);
+    margin: 99px 30px;
+  }
+  
+  .noseCustom::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    border-radius: 100%;
+    background: #648999;
+    transform: rotate(70deg);
+    margin: 19px 25px;
+  }
+  
+  .noseTipCustom {
+    position: absolute;
+    width: 25px;
+    height: 21px;
+    border-radius: 100%;
+    background: #121d21;
+    margin: 90px 47px;
+  }
+  
+  .earsCustom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 70px solid #586e7b;
+    margin: -152px -50px;
+    transform: rotate(-12deg);
+  }
+  
+  .innerEarCustom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-right: 21px solid transparent;
+    border-bottom: 55px solid #2d4149;
+    margin: -132px -21px;
+  }
+  
+  .earsCustom::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px 30px 0 0;
+    background: #586e7b;
+    transform: rotate(-90deg);
+    margin: 60px -31px;
+  }
+  
+  .outerEarsCustom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 70px solid #586e7b;
+    margin: -142px 50px;
+    transform: rotate(12deg);
+  }
+  
+  .outerEarsCustom::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 0 0 30px 30px;
+    background: #586e7b;
+    transform: rotate(-90deg);
+    margin: 60px 1px;
+  }
+  
+  .innerEarTipCustom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-right: 21px solid transparent;
+    border-bottom: 55px solid #2d4149;
+    margin: -132px -21px;
+  }
+  
+  .bodyCustom {
+    position: absolute;
+    width: 155px;
+    height: 142px;
+    border-radius: 162px 30px 162px 162px;
+    background: #556c7a;
+    margin: 255px 261px;
+  }
+  
+  
+  .basketCustom {
+    border-top: 152px solid #9de3fd;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    justify-content: center;
+    height: 0;
+    width: 212px;
+    margin: 295px 182px;
+    position: relative;
+
+  }
+
+  
+  .basketCustom::before {
+    content: "";
+    display: block;
+    width: 281px;
+    height: 21px;
+    border-radius: 21px;
+    background: #d4f0f9;
+    border: 1px solid gray;
+    margin: -157px -39px;
+  }
+  
+  .basketCustom::after {
+    content: "";
+    display: block;
+    width: 231px;
+    height: 21px;
+    border-radius: 21px;
+    background: #d4f0f9;
+    border: 1px solid gray;
+    margin: 271px -12px;
+  }
+  
+  .frontLegCustom {
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    border-radius: 12px;
+    background: #556c7a;
+    margin: 12px 142px;
+  }
+  
+  .frontLegCustom::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 40px;
+    border-radius: 0 0 12px 12px;
+    background: #556c7a;
+    margin: 9px 43px;
+  }
+  
+  .backLegCustom {
+    position: absolute;
+    width: 75px;
+    height: 25px;
+    border-radius: 12px;
+    background: #2d4149;
+    margin: 261px 403px;
+  }
+  
+  .backLegCustom::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 40px;
+    border-radius: 0 0 12px 12px;
+    background: #2d4149;
+    margin: 9px 48px;
+  }
+  
+  .tailCustom {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    border-bottom: 30px solid #556c7a;
+    margin: -85px -27px;
+    transform: rotate(43deg);
+    animation: tailWagCustom 0.3s alternate infinite;
+  }
+  
+  .ctaTextCustom {
+    color: white;
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  @keyframes giraCustom {
+    0% {
+      transform: rotate(6deg);
+    }
+    100% {
+      transform: rotate(-6deg);
+    }
+  }
+  
+  @keyframes tailWagCustom {
+    0% {
+      transform: rotate(43deg);
+    }
+    100% {
+      transform: rotate(33deg);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .mainContainer {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
+  
+    .chatContainerCustom {
+      max-width: 100%;
+      width: 100%;
+      height: 75vh; /* Set height to 75% of the viewport height */
+      padding: 0; /* Remove any padding */
+    }
+  
+    .dogContainerCustom {
+      flex: 0 0 30%; /* Set the dog container to take the full width */
+      display: flex;
+      justify-content: center; /* Center the dog horizontally */
+      align-items: flex-start; /* Align the dog to the top */
+      margin-top: 20px; /* Add some space above the dog */
+      height: auto; /* Allow the height to adjust based on content */
+      padding-top: 100px; /* Optional: Add padding to adjust positioning */
+      
+    }
+  
+    .dogWrapperCustom {
+        position: relative;
+        width: auto;
+        height: 100%;
+        max-height: 100%;
+        background: #fcd7b9;
+        display: inline-block;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+      
+      display: flex;
+      justify-content: center; /* Center the dog horizontally */
+      align-items: flex-start; /* Align the dog to the top */
+      width: 100%;
+      height: auto; /* Ensure wrapper takes appropriate height */
+    }
+  
+    .dogCustom {
+      position: relative;
+      max-width: 100%;
+      margin-top: 105px;
+      /* Ensure there’s no margin pushing it down */
+      justify-content: center;
+      align-items: center;
+    }
+  }

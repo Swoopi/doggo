@@ -1,11 +1,14 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
+
+
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  background: black;
+  background: #FCD7B9;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,18 +25,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer; /* Makes the entire container clickable */
+  cursor: pointer;
 }
 
 .todo {
   display: flex;
   justify-content: center;
+  margin: 30px 90px;
   align-items: center;
-  position: relative;
+  flex-direction: column;
 }
 
 .dog {
   position: relative;
+  height: 70vh;
 }
 
 .cabezota {
@@ -238,7 +243,8 @@ body {
 }
 
 .canasta {
-  position: absolute;
+  justify-content: center;
+  position: relative;
   border-top: 152px solid #9de3fd;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
@@ -316,11 +322,15 @@ body {
   margin: -85px -27px;
   transform: rotate(43deg);
   animation: gira3 0.3s alternate infinite;
+  background: none; /* Ensure there's no background color */
+  border-top: none;  /* Remove any unnecessary borders */
+  border-left: none; /* Remove any unnecessary borders */
+  border-right: none;
 }
 
 .cta-text {
-  color: white;
-  margin-top: 20px;
+  color: black;
+  margin-top: 10px;
   font-size: 24px;
   text-align: center;
 }
@@ -340,5 +350,11 @@ body {
   }
   100% {
     transform: rotate(33deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    align-items: center;
   }
 }

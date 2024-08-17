@@ -76,10 +76,10 @@ export default function RootPage() {
           </div>
           <div className="canasta"></div>
         </div>
+        <h1 className="cta-text">
+          Click anywhere to begin!
+        </h1>
       </div>
-      <h1 className="cta-text">
-        Click anywhere to begin!
-      </h1>
     </div>
   );
 }
